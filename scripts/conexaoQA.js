@@ -3,14 +3,14 @@ import { check, sleep } from 'k6'
 
 export const options = {
     stages: [
-        // ramp-up from 1 to 15 VUs in 10s
-        { duration: '15s', target: 10 },
+        // ramp-up from 1 to 5 VUs in 5s
+        { duration: '5s', target: 5 },
 
-        // stay at rest on 15 VUs for 15s
-        { duration: '25s', target: 25 },
+        // stay at rest on 10 VUs for 30s
+        { duration: '30s', target: 5 },
 
-        // ramp-down from 15 to 0 VUs in 10s
-        { duration: '10s', target: 0 }
+        // ramp-down from 5 to 0 VUs in 5s
+        { duration: '5s', target: 0 }
     ],
     thresholds: {
         // throws error if more than 90% of the requests takes more than 2 seconds to be completed
