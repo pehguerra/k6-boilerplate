@@ -6,7 +6,7 @@ export const options = {
         // ramp-up from 1 to 5 VUs in 5s
         { duration: '5s', target: 5 },
 
-        // stay at rest on 10 VUs for 30s
+        // stay at rest on 5 VUs for 30s
         { duration: '30s', target: 5 },
 
         // ramp-down from 5 to 0 VUs in 5s
